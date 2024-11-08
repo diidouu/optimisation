@@ -60,7 +60,7 @@ axis equal;
 [x_min2, y_min2] = min_cout(cz);
 
 % Les premiers intervalles sont trop petits pour voir les minimas locaux. 
-% Cela fonctionne mieux avec les deucièmes intervalles.
+% Cela fonctionne mieux avec les deuxièmes intervalles.
 
 %% Question 2
 
