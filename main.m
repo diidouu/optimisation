@@ -59,7 +59,8 @@ axis equal;
 
 [x_min2, y_min2] = min_cout(cz);
 
-% les premiers intervalles sont trop petits pour voir les minimas locaux. Cela fonctionne mieux avec les deucièmes intervalles.
+% Les premiers intervalles sont trop petits pour voir les minimas locaux. 
+% Cela fonctionne mieux avec les deucièmes intervalles.
 
 %% Question 2
 
@@ -73,8 +74,8 @@ legend([a, b], '[-1,1]x[-1,2]', '[-1,4]x[-1,4]');
 axis([-1, 4, -1, 4]);
 axis equal;
 
-%Pour avoir une précision de l'ordre de 10^-4 sur cx, cy et sur R sur l'intervalle donné, 
-%on a alors un nombre d'itération de l'ordre de grandeur de (10^4)^3 ce qui est beaucoup trop grand.
+% Pour avoir une précision de l'ordre de 10^-4 sur cx, cy et sur R sur l'intervalle donné, 
+% on a alors un nombre d'itération de l'ordre de grandeur de (10^4)^3 ce qui est beaucoup trop grand.
 
 %% Question 4
 
