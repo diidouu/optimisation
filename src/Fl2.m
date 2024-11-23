@@ -6,11 +6,11 @@ B2=0.999;
 ai=1;
 ar=10^18;
 al=0;
-g=-B1*gradient_CTLS2(R,xi,yi,x(1),x(2),sig)*d';
+g=-B1*gradient2(R,xi,yi,x(1),x(2),sig)*d';
 
 % On établit les conditions de Wolfe
 CW1 = fonction_cout2(R,xi,yi,x(1)+ai*d(1),x(2)+ai*d(2),sig) <=fonction_cout2(R,xi,yi,x(1),x(2),sig)-ai*g; % Condition de wolfe
-CW2 = (gradient_CTLS2(R,xi,yi,x(1)+ai*d(1),x(2)+ai*d(2),sig)*d')/(gradient_CTLS2(R,xi,yi,x(1),x(2),sig)*d')<= B2;
+CW2 = (gradient2(R,xi,yi,x(1)+ai*d(1),x(2)+ai*d(2),sig)*d')/(gradient2(R,xi,yi,x(1),x(2),sig)*d')<= B2;
 
 % On effectue l'algorithme
 while (~(CW1 && CW2))
@@ -22,7 +22,7 @@ while (~(CW1 && CW2))
         ai=(al+ar)/2;
     end
     CW1 = fonction_cout2(R,xi,yi,x(1)+ai*d(1),x(2)+ai*d(2),sig) <= fonction_cout2(R,xi,yi,x(1),x(2),sig)-ai*g;
-    CW2 = (gradient_CTLS2(R,xi,yi,x(1)+ai*d(1),x(2)+ai*d(2),sig)*d')/(gradient_CTLS2(R,xi,yi,x(1),x(2),sig)*d') <= B2;
+    CW2 = (gradient2(R,xi,yi,x(1)+ai*d(1),x(2)+ai*d(2),sig)*d')/(gradient2(R,xi,yi,x(1),x(2),sig)*d') <= B2;
 end
 a=ai;
 end
